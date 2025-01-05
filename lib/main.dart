@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
       ),
-      home: SafeArea(child: const HomePage()),
+      home: SafeArea(child: HomePage()),
     );
   }
 }

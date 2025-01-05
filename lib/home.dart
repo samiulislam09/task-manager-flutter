@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:task_manager/widgets/solomon-navbar.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+  HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +28,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 20),
             Text(
               'Hello, John!',
               style: TextStyle(
@@ -32,7 +39,14 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            onPressed: () {},
+          ),
+        ],
       ),
+      bottomNavigationBar: Navbar(),
     );
   }
 }
